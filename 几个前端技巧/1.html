@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前端冷门技巧</title>
+    <style>
+      fieldset {
+        margin-bottom: 2rem;
+      }
+      legend {
+        font-weight: bold;
+      }
+      .inline-block {
+        display: inline-block;
+        border: 1px solid blue;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>html5: datalist元素</legend>
+      <label>城市：<input type="text" list="city" /></label>
+      <datalist id="city">
+        <option value="Shanghai"></option>
+        <option value="Beijing"></option>
+        <option value="Shenzhen"></option>
+        <option value="Wuhan"></option>
+        <option value="Tianjin"></option>
+      </datalist>
+      <ol>
+        <li>双击输入框，可以获取所有预置的数值。类似于ComboBox控件的用处。</li>
+        <li>输入首字母，可以过滤备选项。（输入s试试）</li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>css: writing-mode</legend>
+      <div class="inline-block" style="writing-mode: horizontal-tb">horizontal-tb<br />Line 2</div>
+      <div class="inline-block" style="writing-mode: vertical-lr">vertical-lr<br />Line 2</div>
+      <div class="inline-block" style="writing-mode: vertical-rl">vertical-rl<br />Line 2</div>
+      <div class="inline-block" style="writing-mode: sideways-lr">sideways-lr<br />Line 2</div>
+      <div class="inline-block" style="writing-mode: sideways-rl">sideways-rl<br />Line 2</div>
+      <div class="inline-block" style="writing-mode: initial">initial</div>
+
+      <ol>
+        <li>sideways-lr和sideways-rl目前仅有firefox支持，其它浏览器都无法用</li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>可点击标签的option</legend>
+      <label><input type="checkbox" name="chk1" /> 选项1</label>
+      <label><input type="checkbox" name="chk2" /> 选项2</label>
+      <label><input type="checkbox" name="chk3" /> 选项3</label>
+      <label><input type="checkbox" name="chk4" /> 选项4</label>
+
+      <ol>
+        <li>点击标签，等于点击checkbox。</li>
+      </ol>
+    </fieldset>
+  </body>
+</html>
